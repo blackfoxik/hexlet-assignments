@@ -43,4 +43,11 @@ class AppTest < Minitest::Test
 
     assert { last_response.forbidden? }
   end
+
+  def test_has_runtime_header
+    get '/about'
+
+    assert { last_response.ok? }
+    assert last_response.headers.key?('X-Runtime')
+  end
 end
