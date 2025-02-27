@@ -9,7 +9,7 @@ gem 'rails', '~> 7.2'
 
 # END
 
-gem 'hpricot', '0.8.8', git: 'https://github.com/blackfoxik/hpricot.git'
+#gem 'hpricot', '0.8.8', git: 'https://github.com/blackfoxik/hpricot.git'
 gem 'jbuilder'
 gem 'puma'
 gem 'slim-rails'
