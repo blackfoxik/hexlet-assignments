@@ -1,0 +1,31 @@
+= form_with model: @task, local: true do |form|
+  - if @task.errors.any?
+    #error_explanation
+
+    h2
+      = pluralize(@task.errors.count, "ошибка")
+      | :
+    ul
+      - @task.errors.full_messages.each do |message|
+        li
+          = message
+  div
+    = form.label :name
+    = form.text_field :name
+  div
+    = form.label :description
+    = form.text_area :description
+  div
+    = form.label :status
+    = form.text_area :status
+  div
+    = form.label :creator
+    = form.text_area :creator
+  div
+    = form.label :performer
+    = form.text_area :performer
+  div
+    = form.label :completed
+    = form.text_area :completed
+  div
+    = form.submit

@@ -1,0 +1,17 @@
+h1
+table
+  thead
+    tr
+      th
+        | Заголовок
+      th
+        | Действия
+  tbody
+    - @tasks.each do |task|
+      tr
+        td
+          = link_to task.name, task
+        td
+          = link_to 'Редактировать', edit_task_path(task)
+= link_to 'Создать новую задачу', new_task_path
+= link_to 'Назад к списку', tasks_path

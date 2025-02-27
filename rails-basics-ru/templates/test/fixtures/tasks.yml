@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Faker::Name.name
+  description: MyText
+  status: new
+  creator: Faker::Name.name
+  performer: MyString
+  completed: false
+
+two:
+  name: Faker::Name.name
+  description: MyText
+  status: new
+  creator: Faker::Name.name
+  performer: MyString
+  completed: false
