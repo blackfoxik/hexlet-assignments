@@ -1,0 +1,12 @@
+= simple_form_for(@post) do |f|
+  = f.input :title
+  = f.input :body
+  = f.input :summary
+  = f.input :published
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  .form-inputs
+
+  .form-actions
+    = f.button :submit
