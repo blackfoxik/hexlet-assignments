@@ -1,0 +1,21 @@
+= simple_form_for task do |form|
+  - if task.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(task.errors.count, "error")} prohibited this task from being saved:"
+      ul
+        - task.errors.each do |error|
+          li = error.full_message
+  
+  div
+    = form.label :name
+    = form.text_field :name
+  div
+    = form.label :description
+    = form.text_area :description
+  div
+    = form.association :user
+  div
+    = form.association :status
+
+  div
+    = form.submit
