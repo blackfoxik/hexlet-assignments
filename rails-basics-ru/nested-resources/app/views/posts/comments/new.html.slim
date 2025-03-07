@@ -1,0 +1,8 @@
+= content_for :title do
+  = 'New comment'
+  
+== render 'form', comment: @comment, url: post_comments_path(@post)
+
+hr
+
+= link_to 'Back', :back, class: 'btn btn-outline-primary'

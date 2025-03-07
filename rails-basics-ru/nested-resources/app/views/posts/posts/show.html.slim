@@ -1,0 +1,24 @@
+- content_for :title do
+  = @post.title
+p
+  strong.me-2 Body:
+  = @post.body
+/ BEGIN
+
+/ END
+hr
+
+.d-flex
+  = link_to 'Edit', edit_post_path(@post), class: 'btn btn-outline-primary me-2'
+  = link_to 'Back', :back, class: 'btn btn-outline-primary'
+
+p Comments
+
+= link_to 'Add new', new_post_comment_path(@post)
+br
+- @post.post_comments.each do |comment|
+  - comment_text = "#{comment.created_at} #{comment.body}" 
+  p |
+  = comment_text
+  = link_to 'Edit', edit_post_comment_path(comment), class: 'btn btn-outline-primary me-2' 
+  = link_to 'Destroy', post_comment_path(@post.id, comment.id), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'link-danger'
