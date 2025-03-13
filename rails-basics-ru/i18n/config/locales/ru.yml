@@ -1,0 +1,10 @@
+ru:
+  title: Домашняя страница
+  show: Показать
+  edit: Редактировать
+  destroy: Удалить
+  destroy_confirmation: Вы уверены?
+  back: Назад
+  root_link_title: Домой
+  posts_link_title: Посты
+  hexlet_logo: hexlet_logo

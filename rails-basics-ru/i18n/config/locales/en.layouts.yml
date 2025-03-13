@@ -1,0 +1,5 @@
+en:
+  layouts:
+    application:
+      hexlet_head_title: Hexlet
+      hexlet_title: " © Hexlet, %{year}"

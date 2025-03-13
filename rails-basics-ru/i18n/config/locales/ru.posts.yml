@@ -1,0 +1,43 @@
+---
+ru:
+  posts:
+    # BEGIN
+    new_post_title: Новый пост
+    title: Посты
+    table_title: Заголовок таблицы
+    comments_count:
+      zero: нет комментариев
+      one: 1 комментарий
+      few: '%{count} комментария'
+      many: '%{count} комментариев'
+      other: '%{count} комментариев'
+    new: Новый пост 
+    are_you_sure: Вы уверены?
+    edit: Изменить
+    show: Открыть
+    delete: Удалить
+    body: Тело
+    
+    
+
+    create:
+      button_title: Создать Пост
+      success: Пост создан.
+
+    update:
+      success: Пост обновлен.
+    destroy:
+      success: Пост удален.
+
+    # END
+
+    comments:
+      title: комментарии
+      edit:
+        title: Изменить комментарий
+
+      create:
+        success: Комментарий создан.
+
+      update:
+        success: Комментарий обновлен.
