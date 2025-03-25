@@ -8,13 +8,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-20.times do |_i|
-  Vehicle.create!(
+20.times do |i|
+  vehicle = Vehicle.new(
     manufacture: Faker::Vehicle.manufacture,
     model: Faker::Vehicle.model,
     color: Faker::Vehicle.color,
     doors: Faker::Vehicle.doors,
     kilometrage: Faker::Vehicle.kilometrage,
-    production_year: Faker::Vehicle.year
+    production_year: Faker::Date.between(from: 15.years.ago, to: Date.today).to_s
   )
+  image_path = File.open Rails.root.join('test', 'fixtures', 'files', 'hexlet.jpg').to_s
+  vehicle.image.attach(io: image_path, filename: "file#{i}.pdf")
+
+  vehicle.save!
 end
