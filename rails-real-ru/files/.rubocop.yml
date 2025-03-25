@@ -8,6 +8,8 @@ AllCops:
     - '**/examples/**/*'
     - '**/bin/*'
 
+AllCops:
+  SuggestExtensions: false
 
 Style/Documentation:
   Enabled: false
