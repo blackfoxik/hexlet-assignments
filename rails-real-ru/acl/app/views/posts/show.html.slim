@@ -1,0 +1,23 @@
+= content_for :title do
+  = @post.title
+p
+  strong.me-2 = t('.author')
+  = @post.author.name
+p
+  strong.me-2 = t('.body')
+  = @post.body
+
+hr
+
+.d-flex
+  .col
+    - if policy(@post).update?
+      = link_to t('edit'), edit_post_path(@post),
+        class: 'btn btn-outline-primary me-2'
+  .col
+    - if policy(@post).destroy?
+      = link_to t('destroy'), @post, class: 'btn btn-outline-danger me-2',
+        data: { turbo_method: :delete,
+        turbo_confirm: t('destroy_confirmation') }
+
+  = link_to t('back'), :back, class: 'btn btn-outline-primary'
