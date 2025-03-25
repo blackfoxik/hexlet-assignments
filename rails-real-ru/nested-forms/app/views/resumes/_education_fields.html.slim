@@ -1,0 +1,15 @@
+.nested-fields
+  = f.input :institution
+  = f.input :faculty
+  .row
+    .col
+      = f.input :begin_date, as: :date, include_blank: true,
+        start_year: Date.today.year - 90,
+        discard_day: true, order: %i[year month]
+    .col
+      = f.input :end_date, as: :date, include_blank: true,
+        start_year: Date.today.year - 90,
+        discard_day: true, order: %i[year month],
+        wrapper_html: { class: 'col-sm' }
+  .mb-3
+    = link_to_remove_association 'remove education', f
