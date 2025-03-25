@@ -9,9 +9,9 @@
   = f.input :kilometrage
   = f.input :production_year, discard_day: true, discard_month: true
 
-
   hr
   - if vehicle.image.attached? && vehicle.image.attachment.blob.present? && vehicle.image.attachment.blob.persisted?
     = image_tag vehicle.image.variant(:thumb), class: 'img-thumbnail mb-2'
   = f.input :image, as: :file, direct_upload: true
   = f.button :submit, class: 'btn btn-success mt-4 btn-block'
+  
