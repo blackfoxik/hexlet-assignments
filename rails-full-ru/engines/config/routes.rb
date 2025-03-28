@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # BEGIN
-  
-  # END
+  mount RailsStats::Engine, at: '/stats'
 
   scope module: :web do
     root 'home#index'
